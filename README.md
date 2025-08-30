@@ -2,7 +2,6 @@
 
 A powerful Chrome extension that provides real-time protection against phishing attacks with advanced URL analysis and beautiful interface.
 
-![Extension Preview](https://img.shields.io/badge/Chrome-Extension-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)
 ![Version](https://img.shields.io/badge/Version-1.0.0-green?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
 
