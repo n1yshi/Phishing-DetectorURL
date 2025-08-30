@@ -1,6 +1,6 @@
 # 🛡️ Phishing Detector Lite
 
-A powerful Chrome extension that provides real-time protection against phishing attacks with advanced URL analysis and beautiful interface.
+A powerful Chrome extension that provides real-time protection against phishing attacks with advanced URL analysis.
 
 ![Version](https://img.shields.io/badge/Version-1.0.0-green?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
