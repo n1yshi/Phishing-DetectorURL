@@ -309,7 +309,7 @@ SOFTWARE.
 
 ## 👥 Authors
 
-- **Your Name** - *Initial work* - [YourGitHub](https://github.com/yourusername)
+- **n1yshi** - *Initial work* - [YourGitHub](https://github.com/n1yshi)
 
 ## 🙏 Acknowledgments
 
@@ -317,12 +317,6 @@ SOFTWARE.
 - Security research community
 - Open source contributors
 - Beta testers and users
-
-## 📞 Support
-
-- **GitHub Issues** - [Report bugs or request features](https://github.com/yourusername/phishing-detector-extension/issues)
-- **Email** - support@phishingdetector.com (if available)
-- **Documentation** - This README and inline code comments
 
 ---
 
