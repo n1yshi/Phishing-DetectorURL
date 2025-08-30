@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Detector Lite</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body data-theme="dark">
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <div class="shield-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M10,17L6,13L7.41,11.59L10,14.17L16.59,7.58L18,9L10,17Z"/>
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <h1>Phishing Detector</h1>
+                    <span class="logo-subtitle">Lite</span>
+                </div>
+            </div>
+            <button class="theme-toggle" id="themeToggle" title="Toggle theme">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12,18C11.11,18 10.26,17.8 9.5,17.45C11.56,16.5 13,14.42 13,12C13,9.58 11.56,7.5 9.5,6.55C10.26,6.2 11.11,6 12,6A6,6 0 0,1 18,12A6,6 0 0,1 12,18M20,8.69V4H15.31L12,0.69L8.69,4H4V8.69L0.69,12L4,15.31V20H8.69L12,23.31L15.31,20H20V15.31L23.31,12L20,8.69Z"/>
+                </svg>
+            </button>
+        </header>
+
+        <!-- Protection Status -->
+        <div class="protection-status" id="protectionStatus">
+            <div class="status-indicator">
+                <div class="status-circle" id="statusCircle">
+                    <div class="status-icon" id="statusIcon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M10,17L6,13L7.41,11.59L10,14.17L16.59,7.58L18,9L10,17Z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="status-text">
+                    <h2 id="statusTitle">Protected</h2>
+                    <p id="statusDescription">Real-time phishing protection active</p>
+                </div>
+            </div>
+            
+            <!-- Main Toggle -->
+            <div class="main-toggle">
+                <label class="toggle-switch">
+                    <input type="checkbox" id="protectionToggle" checked>
+                    <span class="toggle-slider">
+                        <span class="toggle-button"></span>
+                    </span>
+                </label>
+            </div>
+        </div>
+
+        <!-- Current Site Analysis -->
+        <div class="site-analysis" id="siteAnalysis">
+            <div class="analysis-header">
+                <div class="site-icon" id="siteIcon">🌐</div>
+                <div class="site-info">
+                    <div class="site-name" id="siteName">Loading...</div>
+                    <div class="site-url" id="siteUrl">Analyzing current page...</div>
+                </div>
+                <div class="security-score" id="securityScore">
+                    <div class="score-circle">
+                        <span class="score-value" id="scoreValue">--</span>
+                    </div>
+                    <div class="score-label">Security Score</div>
+                </div>
+            </div>
+            
+            <div class="threat-indicators">
+                <div class="indicator" id="urlIndicator">
+                    <div class="indicator-icon">🔗</div>
+                    <div class="indicator-info">
+                        <div class="indicator-label">URL Structure</div>
+                        <div class="indicator-status" id="urlStatus">Checking...</div>
+                    </div>
+                    <div class="indicator-result" id="urlResult">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M11,16.5L18,9.5L16.59,8.09L11,13.67L7.41,10.09L6,11.5L11,16.5Z"/>
+                        </svg>
+                    </div>
+                </div>
+                
+                <div class="indicator" id="domainIndicator">
+                    <div class="indicator-icon">🏢</div>
+                    <div class="indicator-info">
+                        <div class="indicator-label">Domain Reputation</div>
+                        <div class="indicator-status" id="domainStatus">Checking...</div>
+                    </div>
+                    <div class="indicator-result" id="domainResult">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M11,16.5L18,9.5L16.59,8.09L11,13.67L7.41,10.09L6,11.5L11,16.5Z"/>
+                        </svg>
+                    </div>
+                </div>
+                
+                <div class="indicator" id="sslIndicator">
+                    <div class="indicator-icon">🔒</div>
+                    <div class="indicator-info">
+                        <div class="indicator-label">SSL Certificate</div>
+                        <div class="indicator-status" id="sslStatus">Checking...</div>
+                    </div>
+                    <div class="indicator-result" id="sslResult">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M11,16.5L18,9.5L16.59,8.09L11,13.67L7.41,10.09L6,11.5L11,16.5Z"/>
+                        </svg>
+                    </div>
+                </div>
+                
+                <div class="indicator" id="suspiciousIndicator">
+                    <div class="indicator-icon">⚠️</div>
+                    <div class="indicator-info">
+                        <div class="indicator-label">Suspicious Patterns</div>
+                        <div class="indicator-status" id="suspiciousStatus">Checking...</div>
+                    </div>
+                    <div class="indicator-result" id="suspiciousResult">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M11,16.5L18,9.5L16.59,8.09L11,13.67L7.41,10.09L6,11.5L11,16.5Z"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Protection Statistics -->
+        <div class="stats-section">
+            <div class="stats-header">
+                <h3>🛡️ Protection Stats</h3>
+                <span class="stats-period">Today</span>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-icon">🚫</div>
+                    <div class="stat-info">
+                        <div class="stat-number" id="threatsBlocked">0</div>
+                        <div class="stat-label">Threats Blocked</div>
+                    </div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-icon">🔍</div>
+                    <div class="stat-info">
+                        <div class="stat-number" id="sitesScanned">0</div>
+                        <div class="stat-label">Sites Scanned</div>
+                    </div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-icon">⚡</div>
+                    <div class="stat-info">
+                        <div class="stat-number" id="avgScore">100</div>
+                        <div class="stat-label">Avg. Score</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Settings -->
+        <div class="settings-section">
+            <div class="settings-header">
+                <h3>⚙️ Settings</h3>
+            </div>
+            
+            <div class="settings-list">
+                <div class="setting-item">
+                    <label class="setting-toggle">
+                        <input type="checkbox" id="realTimeScanning" checked>
+                        <span class="setting-slider"></span>
+                    </label>
+                    <div class="setting-info">
+                        <div class="setting-label">Real-time Scanning</div>
+                        <div class="setting-desc">Analyze URLs as you browse</div>
+                    </div>
+                </div>
+                
+                <div class="setting-item">
+                    <label class="setting-toggle">
+                        <input type="checkbox" id="warningPopups" checked>
+                        <span class="setting-slider"></span>
+                    </label>
+                    <div class="setting-info">
+                        <div class="setting-label">Warning Popups</div>
+                        <div class="setting-desc">Show alerts for suspicious sites</div>
+                    </div>
+                </div>
+                
+                <div class="setting-item">
+                    <label class="setting-toggle">
+                        <input type="checkbox" id="soundAlerts">
+                        <span class="setting-slider"></span>
+                    </label>
+                    <div class="setting-info">
+                        <div class="setting-label">Sound Alerts</div>
+                        <div class="setting-desc">Audio notifications for threats</div>
+                    </div>
+                </div>
+                
+                <div class="setting-item">
+                    <label class="setting-toggle">
+                        <input type="checkbox" id="advancedMode">
+                        <span class="setting-slider"></span>
+                    </label>
+                    <div class="setting-info">
+                        <div class="setting-label">Advanced Mode</div>
+                        <div class="setting-desc">Detailed threat analysis</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="actions-section">
+            <button class="action-btn primary" id="scanCurrentSite">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z"/>
+                </svg>
+                Scan Current Site
+            </button>
+            
+            <button class="action-btn secondary" id="reportSite">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M14,12H15.5V14H14V12M14,4H15.5V10H14V4M13,1H16V23H13V1M8,4V6H11V4H8M8,8V10H11V8H8M8,12V14H11V12H8M8,16V18H11V16H8M8,20V22H11V20H8M4,4V6H7V4H4M4,8V10H7V8H4M4,12V14H7V12H4M4,16V18H7V16H4M4,20V22H7V20H4Z"/>
+                </svg>
+                Report Suspicious Site
+            </button>
+        </div>
+
+        <!-- Toast Notifications -->
+        <div class="toast" id="toast">
+            <div class="toast-icon" id="toastIcon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"/>
+                </svg>
+            </div>
+            <span id="toastMessage">Protection enabled</span>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
