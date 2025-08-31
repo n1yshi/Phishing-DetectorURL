@@ -1,45 +1,45 @@
-# 🛡️ Phishing Detector Lite
+# Phishing Detector Lite
 
 A powerful Chrome extension that provides real-time protection against phishing attacks with advanced URL analysis.
 
 ![Version](https://img.shields.io/badge/Version-1.0.0-green?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
 
-## ✨ Features
+## Features
 
-### 🔍 Real-time Protection
+### Real-time Protection
 - **Automatic URL Analysis** - Scans websites as you browse
 - **Threat Detection** - Identifies suspicious domains, URLs, and content
 - **Warning Overlays** - Blocks access to dangerous sites with detailed warnings
 - **Background Monitoring** - Continuous protection without impacting performance
 
-### 🎯 Advanced Detection
+### Advanced Detection
 - **URL Structure Analysis** - Detects suspicious patterns and malformed URLs
 - **Domain Reputation Check** - Identifies typosquatting and suspicious domains
 - **SSL Certificate Validation** - Ensures secure connections
 - **Content Analysis** - Scans for phishing indicators in page content
 - **Form Protection** - Monitors suspicious form submissions
 
-### 📊 Smart Analytics
+### Smart Analytics
 - **Security Scoring** - 0-100 security score for each website
 - **Threat Statistics** - Track blocked threats and scanned sites
 - **Real-time Updates** - Live protection status and statistics
 - **Detailed Reports** - Comprehensive threat analysis
 
-### ⚙️ Customizable Settings
+### ⚙Customizable Settings
 - **Protection Toggle** - Enable/disable protection instantly
 - **Real-time Scanning** - Control automatic URL analysis
 - **Warning Popups** - Customize threat notifications
 - **Sound Alerts** - Audio notifications for threats
 - **Advanced Mode** - Detailed threat analysis for power users
 
-### 🎨 Beautiful Interface
+### Beautiful Interface
 - **Modern Design** - Clean, intuitive user interface
 - **Dark/Light Theme** - Toggle between themes
 - **Responsive Layout** - Optimized for all screen sizes
 - **Smooth Animations** - Polished user experience
 
-## 🚀 Installation
+## Installation
 
 ### From Chrome Web Store (Recommended)
 *Coming soon - extension will be published to Chrome Web Store*
@@ -92,7 +92,7 @@ A powerful Chrome extension that provides real-time protection against phishing 
 - **70-89** - ⚠️ Warning (Yellow)
 - **0-69** - ❌ Dangerous (Red)
 
-## 🔧 Technical Details
+## Technical Details
 
 ### Architecture
 - **Manifest V3** - Latest Chrome extension standard
@@ -147,7 +147,7 @@ phishing-detector-extension/
 └── README.md             # This file
 ```
 
-## 🛠️ Development
+## Development
 
 ### Prerequisites
 - Chrome browser (version 88+)
@@ -165,7 +165,7 @@ The extension is ready to use as-is. For distribution:
 1. Zip the entire folder (excluding .git)
 2. Upload to Chrome Web Store Developer Dashboard
 
-## 🔒 Privacy & Security
+## Privacy & Security
 
 ### Data Collection
 - **No Personal Data** - Extension doesn't collect personal information
@@ -206,7 +206,7 @@ We welcome contributions! Here's how you can help:
 - Test on multiple websites
 - Ensure backward compatibility
 
-## 📊 Statistics & Performance
+## Statistics & Performance
 
 ### Detection Accuracy
 - **95%+ Accuracy** - High precision phishing detection
@@ -218,7 +218,7 @@ We welcome contributions! Here's how you can help:
 - **Low CPU Impact** - Background processing optimized
 - **Battery Friendly** - Efficient algorithms
 
-## 🆘 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -246,37 +246,6 @@ We welcome contributions! Here's how you can help:
 1. Check this README first
 2. Search existing GitHub issues
 3. Create a new issue with details
-4. Contact support (if available)
-
-## 📝 Changelog
-
-### Version 1.0.0 (Current)
-- ✨ Initial release
-- 🛡️ Real-time phishing protection
-- 🎨 Beautiful modern interface
-- 📊 Security scoring system
-- ⚙️ Customizable settings
-- 🔍 Advanced threat detection
-- 📱 Responsive design
-- 🌙 Dark/light theme support
-
-## 🔮 Roadmap
-
-### Upcoming Features
-- [ ] Machine learning threat detection
-- [ ] Community threat database
-- [ ] Website reputation history
-- [ ] Advanced reporting dashboard
-- [ ] Multi-language support
-- [ ] Mobile browser support
-- [ ] API for developers
-- [ ] Enterprise features
-
-### Long-term Goals
-- Integration with security services
-- AI-powered threat analysis
-- Real-time threat intelligence
-- Cross-browser compatibility
 
 ## 📄 License
 
@@ -308,7 +277,7 @@ SOFTWARE.
 
 ## 👥 Authors
 
-- **n1yshi** - *Initial work* - [YourGitHub](https://github.com/n1yshi)
+- **n1yshi** - *Initial work* - [MyGithub](https://github.com/n1yshi)
 
 ## 🙏 Acknowledgments
 
